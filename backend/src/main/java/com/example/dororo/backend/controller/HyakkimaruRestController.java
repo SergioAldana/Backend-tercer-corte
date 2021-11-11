@@ -40,9 +40,10 @@ public class HyakkimaruRestController {
 
     @PutMapping("/hyakkimaru/{id}")
     @ResponseStatus(HttpStatus.ACCEPTED)
-    public Hyakkimaru edit(@PathVariable Long id, @RequestBody Hyakkimaru estudiante) {
+    public Hyakkimaru update(@PathVariable Long id, @RequestBody Hyakkimaru estudiante) {
         Hyakkimaru hyakkimaru = hyakkimaruService.findById(id);
         hyakkimaru.setParte(estudiante.getParte());
+        hyakkimaru.setEstado(hyakkimaru.getEstado());
         return hyakkimaruService.save(hyakkimaru);
     }
 

@@ -14,6 +14,9 @@ public class Hyakkimaru implements Serializable {
     private Long id;
     @Column
     private String parte;
+    //Faltante o Recuperada
+    @Column
+    private String estado;
 
     public Long getId() {
         return id;
@@ -27,8 +30,16 @@ public class Hyakkimaru implements Serializable {
         return parte;
     }
 
-    public void setParte(String partes) {
-        this.parte = partes;
+    public void setParte(String parte) {
+        this.parte = parte;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
     }
 
 }
