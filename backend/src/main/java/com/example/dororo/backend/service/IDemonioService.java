@@ -1,8 +1,7 @@
 package com.example.dororo.backend.service;
 
+import com.example.dororo.backend.modelEntity.Cuerpo;
 import com.example.dororo.backend.modelEntity.Demonio;
-import com.example.dororo.backend.modelEntity.Hyakkimaru;
-
 import java.util.List;
 
 public interface IDemonioService {
@@ -11,7 +10,7 @@ public interface IDemonioService {
 
     Demonio findById(Long id);
 
-    List<Hyakkimaru> findAllHyakkimaru();
+    List<Cuerpo> findAllCuerpo();
 
     Demonio save(Demonio demonio);
 

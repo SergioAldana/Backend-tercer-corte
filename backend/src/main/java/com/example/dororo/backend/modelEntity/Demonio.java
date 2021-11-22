@@ -22,9 +22,9 @@ public class Demonio implements Serializable {
     //Espacio para crear el atributo foto
 
     @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "hyakkimaru_id", referencedColumnName = "id")
+    @JoinColumn(name = "cuerpo_id", referencedColumnName = "id")
     @JsonIgnoreProperties({"hibarnateLazy","handler"})
-    private Hyakkimaru hyakkimaru_id ;
+    private Cuerpo cuerpoId ;
 
     public long getId() {
         return id;
@@ -50,12 +50,12 @@ public class Demonio implements Serializable {
         this.ubicacion = ubicacion;
     }
 
-    public Hyakkimaru getHyakkimaru_id() {
-        return hyakkimaru_id;
+    public Cuerpo getCuerpoId() {
+        return cuerpoId;
     }
 
-    public void setHyakkimaru_id(Hyakkimaru hyakkimaru_id) {
-        this.hyakkimaru_id = hyakkimaru_id;
+    public void setCuerpoId(Cuerpo cuerpoId) {
+        this.cuerpoId = cuerpoId;
     }
 
 }
