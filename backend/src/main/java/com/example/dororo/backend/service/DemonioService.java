@@ -5,9 +5,11 @@ import com.example.dororo.backend.modelDAO.IDemonioDAO;
 import com.example.dororo.backend.modelEntity.Cuerpo;
 import com.example.dororo.backend.modelEntity.Demonio;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class DemonioService implements IDemonioService {
 
     @Autowired
@@ -27,10 +29,12 @@ public class DemonioService implements IDemonioService {
     }
 
     //Se debe verificar este metodo
+    /*
     @Override
     public List<Cuerpo> findAllCuerpo() {
         return demonioDAO.findAllCuerpo();
     }
+     */
 
     @Override
     public Demonio save(Demonio demonio) {

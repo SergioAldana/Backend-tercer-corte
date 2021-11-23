@@ -17,7 +17,7 @@ public class CuerpoRestController {
     private CuerpoService cuerpoService;
 
     @GetMapping("/cuerpo")
-    public List<Cuerpo> listarCuerpo() {
+    public List<Cuerpo> findAll() {
         return cuerpoService.findAll();
     }
 
@@ -28,8 +28,8 @@ public class CuerpoRestController {
 
     @PostMapping("/cuerpo")
     @ResponseStatus(HttpStatus.CREATED)
-    public Cuerpo save(@RequestBody Cuerpo hyakkimaru) {
-        return cuerpoService.save(hyakkimaru);
+    public Cuerpo save(@RequestBody Cuerpo cuerpo) {
+        return cuerpoService.save(cuerpo);
     }
 
     @DeleteMapping("/cuerpo/{id}")
@@ -38,6 +38,8 @@ public class CuerpoRestController {
         cuerpoService.remove(id);
     }
 
+    //Verificar este metodo
+    /*
     @PutMapping("/cuerpo/{id}")
     @ResponseStatus(HttpStatus.ACCEPTED)
     public Cuerpo update(@PathVariable Long id, @RequestBody Cuerpo cuerpo) {
@@ -46,5 +48,6 @@ public class CuerpoRestController {
         cuerpo1.setEstado(cuerpo.getEstado());
         return cuerpoService.save(cuerpo);
     }
+    */
 
 }

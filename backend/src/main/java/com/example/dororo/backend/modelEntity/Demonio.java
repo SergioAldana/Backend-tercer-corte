@@ -5,8 +5,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import javax.persistence.*;
 import java.io.Serializable;
 
-@Entity
-@Table(name = "demonio")
+@Entity(name = "demonio")
 public class Demonio implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -23,8 +22,8 @@ public class Demonio implements Serializable {
 
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "cuerpo_id", referencedColumnName = "id")
-    @JsonIgnoreProperties({"hibarnateLazy","handler"})
-    private Cuerpo cuerpoId ;
+    @JsonIgnoreProperties({"hibernateLazy", "handler"})
+    private Cuerpo cuerpoId;
 
     public long getId() {
         return id;

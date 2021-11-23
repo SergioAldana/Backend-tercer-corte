@@ -10,7 +10,7 @@ public interface IDemonioService {
 
     Demonio findById(Long id);
 
-    List<Cuerpo> findAllCuerpo();
+    //List<Cuerpo> findAllCuerpo();
 
     Demonio save(Demonio demonio);
 

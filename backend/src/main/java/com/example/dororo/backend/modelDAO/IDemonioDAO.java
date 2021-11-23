@@ -9,7 +9,8 @@ import java.util.List;
 
 public interface IDemonioDAO extends JpaRepository<Demonio, Long> {
 
-    @Query("from cuerpo")
+    /*@Query("from cuerpo")
     List<Cuerpo> findAllCuerpo();
+     */
 
 }

@@ -3,8 +3,7 @@ package com.example.dororo.backend.modelEntity;
 import javax.persistence.*;
 import java.io.Serializable;
 
-@Entity
-@Table(name = "cuerpo")
+@Entity(name = "cuerpo")
 public class Cuerpo implements Serializable {
 
     private static final long serialVersionUID = 1L;
