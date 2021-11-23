@@ -39,15 +39,13 @@ public class CuerpoRestController {
     }
 
     //Verificar este metodo
-    /*
     @PutMapping("/cuerpo/{id}")
     @ResponseStatus(HttpStatus.ACCEPTED)
     public Cuerpo update(@PathVariable Long id, @RequestBody Cuerpo cuerpo) {
-        Cuerpo cuerpo1 = cuerpoService.findById(id);
-        cuerpo1.setParte(cuerpo.getParte());
-        cuerpo1.setEstado(cuerpo.getEstado());
+        Cuerpo actualizado = cuerpoService.findById(id);
+        actualizado.setParte(cuerpo.getParte());
+        actualizado.setEstado(cuerpo.getEstado());
         return cuerpoService.save(cuerpo);
     }
-    */
 
 }
