@@ -17,12 +17,13 @@ public class Demonio implements Serializable {
     private String nombre;
     @Column
     private String ubicacion;
-
-    //Espacio para crear el atributo foto
+    //Por derrotar o Derrotado
+    @Column
+    private String estado;
 
     @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "cuerpo_id", referencedColumnName = "id")
-    @JsonIgnoreProperties({"hibernateLazy", "handler"})
+    @JoinColumn(name = "cuerpo_id")
+    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     private Cuerpo cuerpoId;
 
     public long getId() {
@@ -55,6 +56,14 @@ public class Demonio implements Serializable {
 
     public void setCuerpoId(Cuerpo cuerpoId) {
         this.cuerpoId = cuerpoId;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
     }
 
 }
